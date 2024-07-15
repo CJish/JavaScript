@@ -32,5 +32,30 @@ function getGrade(score) {
     }
 
     return letterGrade;
+}
 
+function hasPassingGrade(score) {
+    let passing = false;
+
+    if (score >= 60) {
+        passing = true;
+    }
+
+    return passing;
+}
+
+function studentMsg(totalScores, studentScore) {
+
+    let studentScoreMsg = "";
+
+    if (studentScore >= 60) {
+        studentScoreMsg = "You passed the course.";
+    } else {
+        studentScoreMsg = "You failed the course.";
+    }
+
+
+    return "Class average: " + getAverage(totalScores) + 
+            ". Your grade: " + getGrade(studentScore) + ". " +
+            studentScoreMsg;
 }
