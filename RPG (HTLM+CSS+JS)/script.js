@@ -245,7 +245,7 @@ function attack() {
     }
 
     if (Math.random() <= .1 && inventory.length !== 1) {
-        text.innerText += " Your " + inventory.pop() + " breaks."; // pop() removes the weapon AND returns the name
+        text.innerText += " Your " + inventory.pop() + " breaks."; // clever; pop() removes the weapon AND returns the name
         currentWeaponIndex--;
     }
 }
